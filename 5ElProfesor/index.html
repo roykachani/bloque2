@@ -1,0 +1,25 @@
+<!-- 5.	[ElProfesor]
+Confeccionar un programa que permita al usuario ingresar 2 notas y calcular:
+a.	Suma total
+b.	Promedio
+c.	Nota máxima -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const alumno = prompt(`Ingresa el nombre del alumno.`)
+        const nota1 = parseInt(prompt(`Ingresa la primer nota de ${alumno}.`))
+        const nota2 = parseInt(prompt(`Ingresa la segunda nota de ${alumno}.`))
+        const sumaTotal = nota1 + nota2;
+        const promedio = sumaTotal / 2;
+        nota1 < nota2 ? document.write(`El alumno ${alumno} tiene un promedio de ${promedio} y su mamxima nota es ${nota2}`):
+        nota1 >= nota2 ? document.write(`El alumno ${alumno} tiene un promedio de ${promedio} y su mamxima nota es ${nota1}`): stop
+        
+    </script>
+</body>
+</html>

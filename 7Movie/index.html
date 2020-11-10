@@ -1,0 +1,21 @@
+<!-- 7.	[Movie]
+Se ingresan por teclado 4 números, si todos los valores ingresados son menores a 23, imprimir en la página ‘Todos los números son menores al número establecido.  -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const num1 = parseInt(prompt(`Ingresa un numero que se te ocurra.`)) 
+        const num2 = parseInt(prompt(`Ingresa otro numero que se te ocurra.`))
+        const num3 = parseInt(prompt(`Ingresa un tercer numero que se te ocurra.`))
+        const num4 = parseInt(prompt(`Ingresa un cuarto numero que se te ocurra.`))
+        if (num1 < 23 && num2 < 23 && num3 < 23 && num4 < 23) document.write(`Todos los numeros son menores al numero establecido.`)
+        else document.write('Alguno de tus numeros no es menor al valor establecido.')
+    </script>
+</body>
+</html>
