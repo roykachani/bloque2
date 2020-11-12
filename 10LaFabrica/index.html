@@ -1,0 +1,35 @@
+<!-- 10.	[LaFabrica]
+En una empresa trabajan 5 empleados cuyos sueldos oscilan entre $100 y $500, realizar un programa que lea los sueldos que cobra cada empleado e informe cuántos empleados cobran entre $100 y $300 y cuántos cobran más de $300. Además el programa deberá informar el importe que gasta la empresa en sueldos al personal (grupo) -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const empleados = new Array(); 
+        const empleadosBajos = new Array();
+        const empleadosAltos = new Array();
+        let sueldoTotal = 0;
+        for (let i = 0; i < 5; i++){
+            empleados.push(parseInt(prompt(`Ingresá cuanto cobra el empleado N°${i + 1}.\nRecuerda que los sueldos oscilan entre $100 y $500.`)))
+            sueldoTotal = sueldoTotal + empleados[i];
+            if (empleados[i] >= 100 && empleados[i] <= 300){
+                empleadosBajos.push(empleados[i])
+            } else if (empleados[i] > 300 && empleados[i] <= 500) {
+                empleadosAltos.push(empleados[i])
+                
+
+            } else{
+                console.log(`Ingresaron datos fuera del rango de cobro : $${empleados[i]}`)
+                document.write(`Tienes un empleado que cobra $${empleados[i]}<br>`);
+            }
+        }
+        document.write(`Tenes un total de ${empleadosBajos.length} empleados que cobran entre $100 y $300.<br>`)
+        document.write(`Tenes un total de ${empleadosAltos.length} empleados que cobran mas de $300.<br>`)
+        document.write(`Tenes un gasto mensual de $${sueldoTotal} al mes en sueldos.`)
+    </script>
+</body>
+</html>
